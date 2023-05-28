@@ -19,7 +19,6 @@ void print_fac(int x)
     }
 
     tm = clock() - tm;
-    CLOCKS_PER_SEC;
     std::cout << "FAT " << x << " " << " = " << a.toStr() 
     << " in: " << (float)tm/CLOCKS_PER_SEC << "s" << std::endl;
 }
