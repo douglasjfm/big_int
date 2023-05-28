@@ -19,8 +19,9 @@ void print_fac(int x)
     }
 
     tm = clock() - tm;
-    std::cout << "FAT " << x << " " << " = " << a.toStr() 
-    << " in: " << (float)tm/CLOCKS_PER_SEC << "s" << std::endl;
+    std::cout << "FAT " << x << " " << " = " << a.toStr() << std::endl;
+    std::cout << "in: " << (float)tm/CLOCKS_PER_SEC << "s" << std::endl;
+    std::cout << "output length: " << a.toStr().size() << " digits" << std::endl;
 }
 
 int main(int argc, char **argv)
