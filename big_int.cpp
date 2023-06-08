@@ -160,6 +160,19 @@ BI BI::operator* (const BI &bi)
         {
             sum1.num.push_back(0);
         }
+
+        if (mn->num[x] == 0) {
+            continue;
+        }
+
+        if (mn->num[x] == 1) {
+            for (unsigned char uc : ma->num) {
+                sum1.num.push_back(uc);
+            }
+            temp = (temp + sum1);
+            continue;
+        }
+
         for (int ma_: ma->num)
         {
             int prd = mn->num[x] * ma_ + resto;
