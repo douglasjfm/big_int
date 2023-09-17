@@ -1,14 +1,14 @@
 {
     "tasks": [
         {
-            "type": "cppbuild",
+            "type": "shell",
             "label": "C/C++: g++ arquivo de build ativo",
             "command": "/usr/bin/g++",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "/home/dgls/Documentos/big_int/main.cpp",
-                "/home/dgls/Documentos/big_int/big_int.cpp",
+                "${fileDirname}/main.cpp",
+                "${fileDirname}/big_int.cpp",
                 "-pthread",
                 "-o",
                 "${fileDirname}/${fileBasenameNoExtension}"

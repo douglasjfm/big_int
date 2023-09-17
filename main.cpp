@@ -31,12 +31,27 @@ void print_fac(int x)
     print_output(x,a,tm);
 }
 
+int is_num_only(const char *in) {
+    if (!in) return 0;
+    for (int i=0; in[i] != '\0'; i++){
+        if (in[i] < '0') return 0;
+        if (in[i] > '9') return 0;
+    }
+
+    return 1;
+}
+
 int main(int argc, char **argv)
 {
     int fat = 0;
     if (argc > 1)
     {
-        sscanf(argv[1], "%d", &fat);
+        if (is_num_only(argv[1])) {
+            sscanf(argv[1], "%d", &fat);
+        } else {
+            std::cout << "Error input '" << argv[1] << "'" << std::endl;
+            return 1;
+        }
     }
     else
     {
